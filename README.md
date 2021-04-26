@@ -4,8 +4,6 @@
 
 > This is a basic calculator built with React.
 
-![screenshot](./docs/screenshot.png)
-
 ## :red_circle: Live Demo
 
 [Live Demo Link](https://calculator-denis-react.herokuapp.com/)
