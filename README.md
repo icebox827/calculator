@@ -30,7 +30,7 @@ To get a local copy up and running follow these simple steps:
 - React
 - HTML5
 - CSS3
-- JsX
+- JSX
 - JavaScript
 - Linters
 - npm
