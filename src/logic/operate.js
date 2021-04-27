@@ -13,6 +13,8 @@ function operate (numberOne, numberTwo, operation) {
       return x.minus(y);
     case '/':
       return y != 0 ? x.div(y) : 'Undefined';
+    case '%':
+      return x.div(100);
     default:
       return 'Error!';
   }
