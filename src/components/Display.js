@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Display(props) {
-  const result = props;
+  const {result} = props;
   return <h1 className="display">{result}</h1>;
 };
 

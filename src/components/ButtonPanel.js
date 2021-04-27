@@ -2,41 +2,37 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-const ButtonPanel = () => {
-  const renderBtn = (name) => {
-    <Button name={name} />
-  }
-
+function ButtonPanel() {
   return (
     <div className="btnPannel">
       <div className="group1">
-        {renderBtn('AC')}
-        {renderBtn('+/-')}
-        {renderBtn('%')}
-        {renderBtn('/')}
+        <Button name="AC" />
+        <Button name="+/-" />
+        <Button name="%" />
+        <Button name="/" />
       </div>
       <div className="group2">
-        {renderBtn('7')}
-        {renderBtn('8')}
-        {renderBtn('9')}
-        {renderBtn('X')}
+        <Button name="7" />
+        <Button name="8" />
+        <Button name="9" />
+        <Button name="X" />
       </div>
       <div className="group3">
-        {renderBtn('4')}
-        {renderBtn('5')}
-        {renderBtn('6')}
-        {renderBtn('-')}
+        <Button name="4" />
+        <Button name="5" />
+        <Button name="6" />
+        <Button name="-" />
       </div>
       <div className="group4">
-        {renderBtn('1')}
-        {renderBtn('2')}
-        {renderBtn('3')}
-        {renderBtn('4')}
+        <Button name="1" />
+        <Button name="2" />
+        <Button name="3" />
+        <Button name="+" />
       </div>
       <div className="group5">
-        {renderBtn('0')}
-        {renderBtn('.')}
-        {renderBtn('=')}
+        <Button name="0" />
+        <Button name="," />
+        <Button name="." />
       </div>
     </div>
   )
