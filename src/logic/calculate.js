@@ -4,12 +4,6 @@ function Calculate(calcData, btnName) {
   if (btnName === 'AC') {
     total = '';
     next = '';
-    operation = ''
-    return calcData;
+    operation = '';
   }
-
-  if (btnName === )
-
 };
-
-export default Calculate;
