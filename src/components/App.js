@@ -6,11 +6,11 @@ import '../App.css';
 
 function App() {
   return (
-    <div>
+    <React.Fragment>
       <h1>Calculator</h1>
       <Display />
       <ButtonPanel />
-    </div>
+    </React.Fragment>
   );
 }
 
