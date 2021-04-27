@@ -5,14 +5,29 @@ import calculate from '../logic/calculate';
 import '../App.css';
 
 
-function App() {
-  return (
-    <React.Fragment>
-      <h1>Calculator</h1>
-      <Display />
-      <ButtonPanel />
-    </React.Fragment>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    }
+  }
+
+  handleClick(btnName) {
+    
+  };
+
+  render() {
+    return (
+      <React.Fragment>
+        <h1>Calculator</h1>
+        <Display />
+        <ButtonPanel />
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
