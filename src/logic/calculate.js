@@ -47,10 +47,11 @@ function calculate(calcData, btnName) {
         next += btnName;
       }
       break;
-    default: calcData;
+    default: 
+      return calcData;
   }
 
-  if (['+', '*', '-', '/'].includes(btnName)) {
+  if (['+', 'x', '-', '/'].includes(btnName)) {
     if (total && !next) {
       operation = btnName;
     }
