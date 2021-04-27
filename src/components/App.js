@@ -1,8 +1,16 @@
+import React from 'react';
+import Display from './Display';
+import ButtonPanel from './ButtonPanel';
 import '../App.css';
+
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <React.Fragment>
+      <h1>Calculator</h1>
+      <Display />
+      <ButtonPanel />
+    </React.Fragment>
   );
 }
 
