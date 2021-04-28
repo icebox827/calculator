@@ -27,7 +27,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <h1>Calculator</h1>
-        <Display result={data} />
+        <Display result={this.data} />
         <ButtonPanel clickHandler={this.handleClick} />
       </React.Fragment>
     );
