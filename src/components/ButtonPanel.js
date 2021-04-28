@@ -45,7 +45,7 @@ function ButtonPanel(props) {
   )
 }
 
-ButtonPanel.PropTypes = {
+ButtonPanel.propTypes = {
   result: PropTypes.string,
 };
 

@@ -12,7 +12,7 @@ function Button(props) {
   return <button type="button" className="btn" onClick={handleClick} value={name} >{name}</button>
 };
 
-Button.PropTypes = {
+Button.propTypes = {
   name: PropTypes.string,
   clickHandler: PropTypes.func,
 }
