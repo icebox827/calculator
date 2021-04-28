@@ -11,9 +11,9 @@ function calculate(calcData, btnName) {
   }
 
   if (btnName === '+/-') {
-    total *= -1;
-    next *= -1;
-    return calcData;
+    total = operate(total, next, operation) * -1;
+    next = null;
+    operation = null;
   }
 
   if (btnName === '%') {
@@ -57,7 +57,7 @@ function calculate(calcData, btnName) {
     }
     if (total && next && operation) {
       total = operate(total, next, operation)
-      next = '';
+      next = null;
       operation = btnName;
     }
     return calcData;
