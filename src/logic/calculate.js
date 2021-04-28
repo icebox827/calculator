@@ -7,7 +7,7 @@ function calculate(calcData, btnName) {
     total = null;
     next = null;
     operation = null;
-    return calcData;
+    
   }
 
   if (btnName === '+/-') {
@@ -19,7 +19,7 @@ function calculate(calcData, btnName) {
   if (btnName === '%') {
     total /= 100;
     next /= 100;
-    return calcData;
+    
   }
 
   switch (btnName) {
@@ -47,8 +47,7 @@ function calculate(calcData, btnName) {
         next += btnName;
       }
       break;
-    default: 
-      return calcData;
+   
   }
 
   if (['+', 'x', '-', '/'].includes(btnName)) {
@@ -60,7 +59,7 @@ function calculate(calcData, btnName) {
       next = null;
       operation = btnName;
     }
-    return calcData;
+    
   }
 
   if (btnName === '.') {
@@ -76,7 +75,7 @@ function calculate(calcData, btnName) {
     if (total && operation && !next) {
       next += '0.';
     }
-    return calcData;
+   
   }
 
   if (btnName === '=') {
@@ -88,9 +87,9 @@ function calculate(calcData, btnName) {
       next = null;
       operation = '=';
     }
-    return calcData;
+   
   }
-  return calcData;
+  return { total, next, operation };
 };
 
 export default calculate;
