@@ -4,7 +4,6 @@ import ButtonPanel from './ButtonPanel';
 import calculate from '../logic/calculate';
 import '../App.css';
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -17,7 +16,7 @@ class App extends React.Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(btnName) {
+  handleClick = (btnName) => {
     const result = calculate(this.state, btnName);
     this.setState(result);
   }
@@ -26,7 +25,7 @@ class App extends React.Component {
     const { total, next } = this.state;
     return (
       <React.Fragment>
-        <h1>Calculator</h1>
+        <h1>React Calculator</h1>
         <Display result={next !== null ? next : total || undefined} />
         <ButtonPanel clickHandler={this.handleClick} />
       </React.Fragment>
