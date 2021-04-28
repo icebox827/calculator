@@ -25,7 +25,7 @@ class App extends React.Component {
     const { next, total } = this.state;
     return (
       <div>
-        <h1>Calculator App</h1>
+        <h1>React Calculator</h1>
         <Display result={(next && next.toString()) || (total && total.toString())} />
         <ButtonPanel clickHandler={data => this.handleClick(data)} />
       </div>
