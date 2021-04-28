@@ -11,8 +11,8 @@ function calculate(calcData, btnName) {
   }
 
   if (btnName === '+/-') {
-    total = operate(total, next, operation) * -1;
-    next = null;
+    total *= -1;
+    next *= -1 ;
     operation = null;
   }
 
