@@ -13,6 +13,7 @@ class App extends React.Component {
       next: null,
       operation: null,
     };
+    this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick = btnName => {
