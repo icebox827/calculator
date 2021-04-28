@@ -9,31 +9,26 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-     data: {
-       total: '',
-       next: '',
-       operation: ''
-     }
+      total: null,
+      next: null,
+      operation: null,
     };
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick = (btnName) => {
-    const { data } = this.state;
-    console.log(data)
-    const result = calculate(data, btnName);
-    console.log(result)
-    this.setState({data: result});
+  handleClick = buttonName => {
+    const data = { ...this.state };
+    const calculation = calculate(data, buttonName);
+    this.setState({ ...calculation });
   }
 
   render() {
-    const { data } = this.state;
+    const { next, total } = this.state;
     return (
-      <React.Fragment>
-        <h1>React Calculator</h1>
-        <Display result={ data.toString() } />
-        <ButtonPanel clickHandler={this.handleClick} />
-      </React.Fragment>
+      <div>
+        <h1>Calculator App</h1>
+        <Display result={(next && next.toString()) || (total && total.toString())} />
+        <ButtonPanel clickHandler={data => this.handleClick(data)} />
+      </div>
     );
   }
 }
