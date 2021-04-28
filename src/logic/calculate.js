@@ -7,7 +7,6 @@ function calculate(calcData, btnName) {
     total = null;
     next = null;
     operation = null;
-    
   }
 
   if (btnName === '+/-') {
@@ -19,35 +18,20 @@ function calculate(calcData, btnName) {
   if (btnName === '%') {
     total /= 100;
     next /= 100;
-    
   }
 
-  switch (btnName) {
-    case '0':
-    case '1':
-    case '2':
-    case '3':
-    case '4':
-    case '5':
-    case '6':
-    case '7':
-    case '8':
-    case '9':
-      if (!operation) {
-        if (!total) {
-          total = btnName;
-        } else if (typeof total === 'number') {
-          total = btnName;
-        } else {
-          total += btnName;
-        }
-      } else if (!next) {
-        next = btnName;
+  if (['0','1','2','3','4','5','6','7','8','9'].includes(btnName)) {
+    if (!operation) {
+      if (!total) {
+        total = btnName;
       } else {
-        next += btnName;
+        total += btnName;
       }
-      break;
-   
+    } else if (!next) {
+      next = btnName;
+    } else {
+      next += btnName;
+    }
   }
 
   if (['+', 'x', '-', '/'].includes(btnName)) {
@@ -59,7 +43,6 @@ function calculate(calcData, btnName) {
       next = null;
       operation = btnName;
     }
-    
   }
 
   if (btnName === '.') {
@@ -75,7 +58,6 @@ function calculate(calcData, btnName) {
     if (total && operation && !next) {
       next += '0.';
     }
-   
   }
 
   if (btnName === '=') {
@@ -87,7 +69,6 @@ function calculate(calcData, btnName) {
       next = null;
       operation = '=';
     }
-   
   }
   return { total, next, operation };
 };

@@ -9,17 +9,21 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      total: null,
-      next: null,
-      operation: null,
+     data: {
+       total: '',
+       next: '',
+       operation: ''
+     }
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick = (btnName) => {
     const { data } = this.state;
+    console.log(data)
     const result = calculate(data, btnName);
-    this.setState(result);
+    console.log(result)
+    this.setState({data: result});
   }
 
   render() {
@@ -27,7 +31,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <h1>React Calculator</h1>
-        <Display result={ data } />
+        <Display result={ data.toString() } />
         <ButtonPanel clickHandler={this.handleClick} />
       </React.Fragment>
     );
@@ -35,4 +39,3 @@ class App extends React.Component {
 }
 
 export default App;
-
