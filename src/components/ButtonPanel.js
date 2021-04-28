@@ -6,37 +6,40 @@ function ButtonPanel(props) {
   // eslint-disable-next-line react/prop-types
   const { clickHandler } = props;
   
+  const handleClick = e => {
+    clickHandler(e);
+  };
 
   return (
     <div className="btnPannel">
       <div className="group1">
-        <Button name="AC" onClick={clickHandler} />
-        <Button name="+/-" onClick={clickHandler} />
-        <Button name="%" onClick={clickHandler} />
-        <Button name="/" onClick={clickHandler} />
+        <Button name="AC" clickHandler={handleClick} />
+        <Button name="+/-" clickHandler={handleClick} />
+        <Button name="%" clickHandler={handleClick} />
+        <Button name="/" clickHandler={handleClick} />
       </div>
       <div className="group2">
-        <Button name="7" onClick={clickHandler} />
-        <Button name="8" onClick={clickHandler} />
-        <Button name="9" onClick={clickHandler} />
-        <Button name="x" onClick={clickHandler}/>
+        <Button name="7" clickHandler={handleClick} />
+        <Button name="8" clickHandler={handleClick} />
+        <Button name="9" clickHandler={handleClick} />
+        <Button name="x" clickHandler={handleClick}/>
       </div>
       <div className="group3">
-        <Button name="4" onClick={clickHandler}/>
-        <Button name="5" onClick={clickHandler}/>
-        <Button name="6" onClick={clickHandler}/>
-        <Button name="-" onClick={clickHandler}/>
+        <Button name="4" clickHandler={handleClick}/>
+        <Button name="5" clickHandler={handleClick}/>
+        <Button name="6" clickHandler={handleClick}/>
+        <Button name="-" clickHandler={handleClick}/>
       </div>
       <div className="group4">
-        <Button name="1" onClick={clickHandler}/>
-        <Button name="2" onClick={clickHandler}/>
-        <Button name="3" onClick={clickHandler}/>
-        <Button name="+" onClick={clickHandler}/>
+        <Button name="1" clickHandler={handleClick}/>
+        <Button name="2" clickHandler={handleClick}/>
+        <Button name="3" clickHandler={handleClick}/>
+        <Button name="+" clickHandler={handleClick}/>
       </div>
       <div className="group5">
-        <Button name="0" onClick={clickHandler}/>
-        <Button name="." onClick={clickHandler}/>
-        <Button name="=" onClick={clickHandler}/>
+        <Button name="0" clickHandler={handleClick}/>
+        <Button name="." clickHandler={handleClick}/>
+        <Button name="=" clickHandler={handleClick}/>
       </div>
     </div>
   )

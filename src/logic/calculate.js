@@ -4,9 +4,9 @@ function calculate(calcData, btnName) {
   let { total, next, operation } = calcData;
 
   if (btnName === 'AC') {
-    total = '';
-    next = '';
-    operation = '';
+    total = null;
+    next = null;
+    operation = null;
     return calcData;
   }
 
@@ -85,8 +85,8 @@ function calculate(calcData, btnName) {
     }
     if (total && next && operation) {
       total = operate(total, next, operation);
-      next = '';
-      operation = '';
+      next = null;
+      operation = '=';
     }
     return calcData;
   }
