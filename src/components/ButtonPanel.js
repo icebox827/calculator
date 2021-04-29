@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 
 function ButtonPanel(props) {
-  // eslint-disable-next-line react/prop-types
   const { clickHandler } = props;
   
   const handleClick = e => {
@@ -47,6 +46,7 @@ function ButtonPanel(props) {
 
 ButtonPanel.propTypes = {
   result: PropTypes.string,
+  clickHandler: PropTypes.func,
 };
 
 ButtonPanel.defaultProps = {
