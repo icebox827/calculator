@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Display(props) {
-  const {result} = props;
-  return <h1 className="display">{result}</h1>;
-};
+const Display = ({ result }) => (
+  <div>
+    {result}
+  </div>
+);
 
 Display.propTypes = {
   result: PropTypes.string,

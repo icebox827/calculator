@@ -2,14 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Button(props) {
-  // eslint-disable-next-line react/prop-types
-  const {name}  = props;
-  return <button type="button" className="btn">{name}</button>
+  const {name, clickHandler}  = props;
+
+  const handleClick = e => {
+    clickHandler(e.target.value);
+  };
+
+  return <button type="button" className="btn" onClick={handleClick} value={name} >{name}</button>
 };
 
-
-Button.PropTypes = {
+Button.propTypes = {
   name: PropTypes.string,
+  clickHandler: PropTypes.func,
 }
 
 Button.defaultProps = {

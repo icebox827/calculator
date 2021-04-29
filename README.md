@@ -24,6 +24,8 @@ To get a local copy up and running follow these simple steps:
 1. Go to the [repository page](https://github.com/icebox827/calculator/).
 2. Press the "Code" button and copy the link.
 3. Clone it using git command `git clone <link>`.
+4. run `npm install`
+5. run `npm run start`
 
 ## Technologies
 
