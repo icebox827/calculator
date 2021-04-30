@@ -12,16 +12,16 @@ const App = () => {
   });
  
   const handleClick = btnName => {
-    const data = { ...value };
-    const calculation = calculate(data, btnName);
+    const calculation = calculate(value, btnName);
     setValue({ ...calculation });
+    console.log(calculation)
   }
 
   return (
     <div>
       <h1>React Calculator</h1>
       <Display result={value.operation ? value.next : value.total} />
-      <ButtonPanel clickHandler={data => handleClick(data)} />
+      <ButtonPanel clickHandler={handleClick} />
     </div>
   );
 }
