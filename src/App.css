@@ -5,9 +5,10 @@
 }
 
 h1 {
-  text-align: right;
+  text-align: center;
   text-transform: uppercase;
   margin-top: 20px;
+  margin-bottom: 20px;
   margin-right: 100px;
 }
 
@@ -28,11 +29,17 @@ h1 {
   font-weight: bold;
   text-align: right;
   padding-right: 15px;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
-.buttonPanel {
+.btn {
+  width: 25%;
+  height: 80px;
+}
+
+.btnPannel {
   width: 100%;
+  margin-top: 10px;
 }
 
 .group1 {
@@ -54,3 +61,8 @@ h1 {
 .group5 {
   height: 100px;
 }
+
+.group5 :last-child {
+  width: 50%;
+}
+
