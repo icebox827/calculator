@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>React Calculator</h1>
+      <h1>Denis React Calculator</h1>
       <Display result={(value.next && value.next.toString()) || (value.total && value.total.toString())} />
       <ButtonPanel clickHandler={handleClick} />
     </div>
