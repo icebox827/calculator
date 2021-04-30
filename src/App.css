@@ -35,6 +35,8 @@ h1 {
 .btn {
   width: 25%;
   height: 80px;
+  font-weight: 800;
+  font-size: larger;
 }
 
 .btnPannel {
@@ -62,7 +64,26 @@ h1 {
   height: 100px;
 }
 
-.group5 :last-child {
-  width: 50%;
+.group1 :last-child {
+  background-color: orangered;
 }
 
+.group2 :last-child {
+  background-color: orangered;
+}
+
+.group3 :last-child {
+  background-color: orangered;
+}
+
+.group4 :last-child {
+  background-color: orangered;
+}
+
+.group5 :last-child {
+  background-color: orangered;
+}
+
+.group5 :first-child {
+  width: 50%;
+}
