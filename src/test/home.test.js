@@ -3,14 +3,15 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Home from '../components/Home';
 
-it('Should render Home title', () => {
+// Test rendering Home components
+it('Should renders Home title', () => {
   const { getByText } = render(<Home />);
-  const headerText = getByText(/WELCOME TO MATH MAGICIAN/);
+  const headerText = getByText(/Welcome to Math Magician/);
   expect(headerText).toBeInTheDocument();
 });
 
-it('Should render Home body', () => {
+it('Should renders Home body', () => {
   const { getByText } = render(<Home />);
-  const headerText = getByText(/Where all the magic happens!/);
+  const headerText = getByText(/Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua./);
   expect(headerText).toBeInTheDocument();
 });
