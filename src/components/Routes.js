@@ -11,6 +11,7 @@ const Routes = () => {
     <Navbar />
       <Switch>
         <Route path="/" component={Home} > 
+          <Route path="/home" component={Home} />
           <Route path="/calculator" component={App} />
           <Route path="/quote" component={Quote} />
         </Route>
