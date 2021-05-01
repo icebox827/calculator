@@ -10,9 +10,10 @@ const Routes = () => {
     <BrowserRouter>
     <Navbar />
       <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/calculator" component={App} />
-        <Route path="/quote" component={Quote} />
+        <Route path="/" component={Home} > 
+          <Route path="/calculator" component={App} />
+          <Route path="/quote" component={Quote} />
+        </Route>
       </Switch>
     </BrowserRouter>
   );
