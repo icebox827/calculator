@@ -12,6 +12,23 @@ h1 {
   margin-right: 100px;
 }
 
+.nav {
+  background-color: black;
+  height: 45px;
+}
+
+.navContainer a {
+  color: white;
+  padding-top: 10px;
+  margin: 10px;
+  font-size: large;
+  text-decoration: none;
+}
+
+.navContainer a:hover {
+  background-color: wheat;
+}
+
 .app {
   margin: 20px auto;
   width: 700px;
