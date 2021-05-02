@@ -12,6 +12,10 @@ h1 {
   margin-right: 100px;
 }
 
+h3 {
+  text-align: center;
+}
+
 .nav {
   background-color: black;
   height: 45px;
